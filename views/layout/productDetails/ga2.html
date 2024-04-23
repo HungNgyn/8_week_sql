@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastFood | Ecommerce Website Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../public/css/template.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../public/css/productDetail.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"
+      integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="logo"><i class="fas fa-utensils"></i> FastFood </a>
+      <nav class="navbar">
+        <a href="../template.html">Trang chủ</a>
+        <a href="../category.html" class="scroll" data-section="popular"
+          >Đồ ăn</a
+        >
+        <a
+          href="../aboutUs.html"
+          target="_blank"
+          class="scroll"
+          data-section="about-us"
+          >Về chúng tôi</a
+        >
+        <a href="#contact" class="scroll" data-section="contact">Liên hệ</a>
+        <a href="#rate-us" class="scroll" data-section="rate-us">Đánh giá</a>
+      </nav>
+      <div id="menu-bar" class="fas fa-bars"></div>
+    </header>
+    <div class="product-page">
+      <div class="product-container">
+        <div class="field-back">
+          <a href="../category.html"
+            ><button class="btn-back" title="Quay lại">← Quay lại</button></a
+          >
+        </div>
+        <div class="product-category-detail">
+          <div class="field-img">
+            <div class="item">
+              <img src="../../../public/img/ga2.jpg" alt="demo" />
+            </div>
+          </div>
+          <div class="field-content">
+            <div class="field-breadcrumb">
+              <ul class="breadcrumb">
+                <li><a href="../template.html">Trang chủ</a></li>
+                <li><a href="../category.html">Menu</a></li>
+                <li>Gà 2 miếng</li>
+              </ul>
+            </div>
+            <h2 style="margin-top: 16px">Gà 2 miếng</h2>
+            <div class="field-price">
+              <span>7000</span>
+            </div>
+            <div class="field-note">
+              <div class="field-text">
+                <p>Gà rán thơm ngon</p>
+              </div>
+            </div>
+            <button class="add-bt" onclick="addCart('<%= product.id%>')">
+              Thêm vào giỏ hàng
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>FastFood <i class="fas fa-utensils"></i></h3>
+          <p>Đem đến cho bạn trải nghiệm tuyệt vời nhất!</p>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+          </div>
+        </div>
+        <div class="box" id="contact">
+          <h3>Liên hệ</h3>
+          <a href="#" class="links">
+            <i class="fas fa-phone"></i> +123-456-7890
+          </a>
+          <a href="#" class="links">
+            <i class="fas fa-phone"></i> +111-222-3333
+          </a>
+          <a href="#" class="links">
+            <i class="fas fa-envelope"></i> 1952xxxx@gmail.com
+          </a>
+          <a href="#" class="links">
+            <i class="fas fa-map-marker-alt"></i> Microsoft Teams
+          </a>
+        </div>
+        <div class="box">
+          <h3>Di chuyển đến</h3>
+          <a href="#" class="links">
+            <i class="fas fa-arrow-right"></i> Trang chủ
+          </a>
+        </div>
+        <div class="box">
+          <h3>Thông báo</h3>
+          <p>Đăng ký nhận thông báo mới nhất từ chúng tôi</p>
+          <input type="email" placeholder="your email" class="email" />
+          <input type="submit" value="Gửi" class="btn" />
+          <img
+            src="../../../public/img/payment.png"
+            class="payment-img"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="credit">created by <span> Nhóm 2 </span> | Welcome</div>
+    </section>
+  </body>
+</html>

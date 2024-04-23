@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastFood | Ecommerce Website Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../public/css/template.css"
+    />
+<link rel="stylesheet" type="text/css" href="../../public/css/category.css">
+ <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" type="text/css" href="../../public/css/order.css">
+  </head>
+<section class="order" id="order">
+    <div>
+        <h1 class="heading"><span>Đặt Hàng</span></h1>
+    </div>
+    <div class="row"> 
+      
+        <form action="">
+            <div class="inputBox">
+                <div class="input">
+                    <span>Tên</span>
+                    <input type="text" placeholder="name" value="DEMO" name="username">
+                    <span>Email</span>
+                    <input type="email" placeholder="email" value= "DEMO@GMAIL.COM" name="email">
+                </div>
+                <div class="input">
+                    <span>Số điện thoại</span>
+                    <input type="text" placeholder="number" value= "0932321312312" name="phone">
+                </div>
+
+                
+                    <span>Phương thức thanh toán</span>
+                    <div class="paymentContainer">
+                        <input type="radio" class="payment" name="payment" value="COD" id="cod" >
+                        <span>COD (Thanh toan khi nhan hang)</span>
+                        <label for="cod">
+                            <img src="../../public/img/cod.png" alt="cash on delivery logo">
+                        </label>
+                    </div> 
+                    <div class="paymentContainer">
+                        <input type="radio"  class="payment" name="payment" value="momopayment" id="momo">
+                        <span>Thanh toan nhanh chong bang Momo</span>
+                        <label for="momo">
+                            <img src="../../public/img/MoMo_Logo.png" alt="momo payment logo">
+                        </label>
+                    </div>
+                    <div class="paymentContainer">
+                        <input type="radio"  class="payment" name="payment" value="stripepayment" id="stripe">
+                        <span>Thanh toan nhanh chong bang Stripe</span>
+                        <label for="stripe">
+                            <img src="../../public/img/stripe.png" alt="stripe payment logo">
+                        </label>
+                    </div>
+         
+                <!-- <div class="input">
+                    <input class="paymentStatus" type="hidden" placeholder="paymentStatus" value= "<%=paymentStatus%>" name="paymentStatus">
+                </div> -->
+               
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>Địa chỉ</span>
+                    <textarea placeholder="address" name="address" id="" cols="30" rows="10" ></textarea>
+                </div>
+                <div class="input">
+                    <span>Message</span>
+                    <textarea placeholder="" name="message" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </form>
+
+        <form action="">
+            <div id="myModal" class="inputBox">
+                <div class="modal-body">
+                    <span>Đơn Hàng Của Bạn</span>
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                        <span class="cart-price cart-header cart-column">Giá</span>
+                        <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                    </div>
+                    <div class="cart-items">
+     
+                                <div class="cart-row">
+                                    <div class="cart-item cart-column">
+                                        <img class="cart-item-image" src="../../public/img/banh2.jpg" width="100" height="100">
+                                        <span class="cart-item-title">dEMO</span>
+                                    </div>
+                                    <span class="cart-price cart-column">10000DD</span>
+                                    <div class="cart-quantity cart-column">
+                                        <input class="cart-quantity-input" type="number" value="2" readonly>
+                                    </div>
+                                </div>
+                           
+                            <div class="cart-total">
+                                <strong class="cart-total-title">Tổng Cộng: </strong>
+                                <span class="cart-total-price">100000</span>
+                            </div>
+                    </div>
+                <div>
+                    <div class="input">
+                        <span>Ngày và giờ</span>
+                        <input type="datetime-local" name="date">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id ="order" class="btn order">Đặt hàng</button>
+                </div>  
+            </div>
+        </form>
+    </div>
+    <!-- <% if (cart) { %> 
+    <div class="modal modalOrdered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="text-align: center">Đã đặt hàng thành công</h5>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items">
+                    <% for ( product of cart.listProduct) { %> 
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="<%= product.info.images[0].url %>" alt="<%= product.slug %> " width="100" height="100">
+                                <span class="cart-item-title"><%= product.name %> </span>
+                            </div>
+                        </div>
+                    <% } %> 
+                </div>
+            </div>
+            <div class="modal-header">
+                <h5 class="modal-title" >Vui lòng kiểm tra đơn đặt hàng của bạn trong email</h5>
+            </div>
+        </div>
+    </div>
+    <% } %>  -->
+</section>
+<script src="https://js.stripe.com/v3/"></script>   
+<script src="../../public/js/checkout.js">
